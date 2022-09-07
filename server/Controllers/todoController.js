@@ -17,7 +17,7 @@ module.exports = {
 
   // Get every todo
   getTodos: async (req, res, next) => {
-    const query = 'SELECT description FROM todo';
+    const query = 'SELECT * FROM todo';
     try {
       const allTodos = await pool.query(query);
       res.locals.allTodos = allTodos.rows;

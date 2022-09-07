@@ -1,4 +1,3 @@
-import e from 'cors';
 import React, {Fragment, useState} from 'react';
 
 export default function InputTodo() {
@@ -14,7 +13,7 @@ export default function InputTodo() {
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify(body),
       });
-
+      setDescription('');
       console.log(response);
     } catch (err) {
       console.error(err.message);
