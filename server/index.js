@@ -14,7 +14,7 @@ app.use('/todos', todoRouter);
 // eslint-disable-next-line no-unused-vars
 app.use((err, req, res, next) => {
   const defaultErr = {
-    log: 'Express error handler caught unknown middleware error',
+    log: 'Express global error handler caught unknown middleware error',
     status: 500,
     message: {err: 'An error occurred'},
   };

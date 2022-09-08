@@ -2,5 +2,23 @@ CREATE DATABASE perntodo;
 
 CREATE TABLE todo(
   todo_id SERIAL PRIMARY KEY,
-  description VARCHAR(255)
+  description VARCHAR(255) NOT NULL,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP NULL,
+  priority INTEGER Default 4,
+  completed_at TIMESTAMP NULL,
+  completed BOOLEAN NOT NULL
 );
+
+CREATE TABLE user(
+  user_id SERIAL PRIMARY KEY,
+  email VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  user_created_at TIMEOFDAY(),
+  priority INTEGER NOT NULL,
+);
+
+
+ALTER TABLE todo ADD COLUMN created_at TIMESTAMP;
+ALTER TABLE todo ALTER COLUMN created_at SET DEFAULT NOW();
+ALTER TABLE todo ALTER COLUMN completed SET DEFAULT FALSE;
