@@ -1,16 +1,15 @@
 import {Fragment} from 'react';
 import './assets/Styles/App.css';
-import InputTodo from './Components/InputTodo';
-import ListTodo from './Components/ListTodo';
 import Navbar from './Components/Navbar';
+import Todo from './Components/Todos';
 
 function App() {
   return (
     <Fragment>
       <Navbar />
-      <div className="container">
-        <InputTodo />
-        <ListTodo />
+
+      <div className="container min-vh-100 min-vw-100">
+        <Todo />
       </div>
     </Fragment>
   );
