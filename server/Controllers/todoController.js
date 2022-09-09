@@ -3,7 +3,7 @@ const pool = require('../db/db');
 // CREATE TABLE todo(
 //   todo_id SERIAL PRIMARY KEY,
 //   description VARCHAR(255) NOT NULL,
-//   created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+//   created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 //   updated_at TIMESTAMP NULL,
 //   priority INTEGER Default 4,
 //   completed_at TIMESTAMP NULL,

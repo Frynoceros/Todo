@@ -24,11 +24,11 @@ router.get('/:id', getOneTodo, (req, res) => {
 
 router.post('/', postTodo, (req, res) => {
   console.log('router posted');
-  return res.status(200).json(newTodo.rows[0]);
+  return res.status(200).json();
 });
 
 router.put('/:id', updateTodo, (req, res) => {
-  return res.status(200).json('Updated todo!');
+  return res.status(200).json();
 });
 
 router.delete('/:id', deleteTodo, (req, res) => {
