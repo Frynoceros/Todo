@@ -1,15 +1,18 @@
 import {Fragment} from 'react';
 import './assets/Styles/App.css';
 import Navbar from './Components/Navbar';
-import Todo from './Components/Todos';
+import Todos from './Components/Todos';
+import Footer from './Components/Footer';
 
 function App() {
   return (
     <Fragment>
       <Navbar />
+      <h1 className="text-xl text-center mt-5">Todo List</h1>
+      <div className="max-h-screen m-5">
+        <Todos className="flex flex-row" />
 
-      <div className="container min-vh-100 min-vw-100">
-        <Todo />
+        <Footer />
       </div>
     </Fragment>
   );

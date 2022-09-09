@@ -31,14 +31,18 @@ const Todo = () => {
   };
   return (
     <Fragment>
-      <div className="container p-5 my-5 border max-height: 100%; max-width: 100%;">
-        <InputTodo getTodos={getTodos} />
-        <ListTodo
-          getTodos={getTodos}
-          deleteTodos={deleteTodos}
-          todos={todos}
-          setTodos={setTodos}
-        />
+      <div className="flex flex-row min-h-screen">
+        <div className="basis-1/3">
+          <InputTodo getTodos={getTodos} />
+        </div>
+        <div className="basis-2/3">
+          <ListTodo
+            getTodos={getTodos}
+            deleteTodos={deleteTodos}
+            todos={todos}
+            setTodos={setTodos}
+          />
+        </div>
       </div>
     </Fragment>
   );

@@ -29,30 +29,57 @@ export default function InputTodo({getTodos}) {
 
   return (
     <Fragment>
-      <h1 className="text-center mt-5">Todo List</h1>
-      <div className="input-group mt-3 mb-3">
-        <form className="d-flex mt-5 vw-100" onSubmit={submitForm}>
-          <select
-            className="text-center"
-            value={priority}
-            onChange={(e) => setPriority(e.target.value)}
-          >
-            Priority
-            <option defaultValue={0}>Priority</option>
-            <option value={3}>High</option>
-            <option value={2}>Medium</option>
-            <option value={1}>Low</option>
-          </select>
+      <div className="flex flex-col items-center min-h-full min-w-full">
+        <h2 className="text-base">Time to set some goals</h2>
+        <form className="m-5" onSubmit={submitForm}>
           <input
             type="text"
-            className="form-control"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
             placeholder="What do you want to accomplish?"
+            className="input input-bordered input-s input-success min-w-full"
           />
-          <button className="btn btn-success" type="submit">
-            Add
-          </button>
+
+          <h2 className="text-base text-center m-5">Priority Level</h2>
+          <div className="flex justify-evenly items-center">
+            <div className="flex flex-col items-center">
+              <label className="label cursor-pointer">
+                <input
+                  value={1}
+                  type="radio"
+                  name="radio-6"
+                  className="radio checked:bg-green-500"
+                  onChange={(e) => setPriority(e.target.value)}
+                />
+              </label>
+              <span className="label-text text-base">Low</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <label className="label cursor-pointer">
+                <input
+                  value={2}
+                  type="radio"
+                  name="radio-6"
+                  className="radio checked:bg-yellow-500"
+                  onChange={(e) => setPriority(e.target.value)}
+                />
+              </label>
+              <span className="label-text text-base">Medium</span>
+            </div>
+            <div className="flex flex-col items-center">
+              <label className="label cursor-pointer">
+                <input
+                  value={3}
+                  type="radio"
+                  name="radio-6"
+                  className="radio checked:bg-red-500"
+                  onChange={(e) => setPriority(e.target.value)}
+                />
+              </label>
+              <span className="label-text text-base">High</span>
+            </div>
+          </div>
+          <button className="btn btn-success mt-5 min-w-full">Add</button>
         </form>
       </div>
     </Fragment>
