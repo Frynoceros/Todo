@@ -29,8 +29,7 @@ export default function InputTodo({getTodos}) {
 
   return (
     <Fragment>
-      <div className="flex flex-col items-center min-h-full min-w-full">
-        <h2 className="text-base">Time to set some goals</h2>
+      <div className="flex flex-col ">
         <form className="m-5" onSubmit={submitForm}>
           <input
             type="text"
@@ -48,7 +47,7 @@ export default function InputTodo({getTodos}) {
                   value={1}
                   type="radio"
                   name="radio-6"
-                  className="radio checked:bg-green-500"
+                  className="radio checked:bg-green-500 radio-primary"
                   onChange={(e) => setPriority(e.target.value)}
                 />
               </label>
@@ -60,7 +59,7 @@ export default function InputTodo({getTodos}) {
                   value={2}
                   type="radio"
                   name="radio-6"
-                  className="radio checked:bg-yellow-500"
+                  className="radio checked:bg-yellow-500 radio-warning"
                   onChange={(e) => setPriority(e.target.value)}
                 />
               </label>
@@ -79,7 +78,7 @@ export default function InputTodo({getTodos}) {
               <span className="label-text text-base">High</span>
             </div>
           </div>
-          <button className="btn btn-success mt-5 min-w-full">Add</button>
+          <button className="btn btn-secondary mt-5 min-w-full">Add</button>
         </form>
       </div>
     </Fragment>

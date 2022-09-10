@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import InputTodo from './InputTodo';
-import ListTodo from './ListTodo';
+import Table from './Table';
 
 const Todo = () => {
   const [todos, setTodos] = useState([]);
@@ -31,12 +31,12 @@ const Todo = () => {
   };
   return (
     <Fragment>
-      <div className="flex flex-row min-h-screen">
+      <div className="flex flex-row ">
         <div className="basis-1/3">
           <InputTodo getTodos={getTodos} />
         </div>
         <div className="basis-2/3">
-          <ListTodo
+          <Table
             getTodos={getTodos}
             deleteTodos={deleteTodos}
             todos={todos}
